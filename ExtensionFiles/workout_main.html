@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html >
 	<head>
-		<link type="text/css" rel="stylesheet" href="stylesheet_main.css"/>
+		<!-- <link type="text/css" rel="stylesheet" href="stylesheet_main.css"/> -->
 		<title>Coach crtr</title>
 		
 		<!-- Bootstrap -->
-   		<link href="css/bootstrap.min.css" rel="stylesheet">
+   		<link href="css/bootstrap.css" rel="stylesheet">
 	</head>
 	
-	<body>
+	<body >
 	<!-- <img src="Logo.gif"></img> -->
-		<div id="div1">
-			<div class = "jumbotron">
-				<h1 id="userInstructions">Do REPITIONS reps of EXERCISE!<h1>
-			</div>
-			<button id = "btnSucess" type="button" onClick="success_Prompt()">Completed!</button>
-			<button id = "btnFail" type="button" onClick="fail_Prompt()">Failed</button>
-		</div>
+		
+			<h1 id="userInstructions">Do REPITIONS reps of EXERCISE!<h1>
+			<button class="btn btn-success btn-lg" id = "btnSucess" type="button" onClick="success_Prompt()">Completed!</button>
+			<button class="btn btn-danger btn-lg" id = "btnFail" type="button" onClick="fail_Prompt()">Failed</button>
+		
 		<script>
 			function success_Prompt() {
 			
