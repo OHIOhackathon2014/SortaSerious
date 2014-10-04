@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hackathon Chrome Extension</title>
+	</head>
+	
+	<body>
+		<div>
+			<h1>Do REPITIONS reps of EXERCISE!<h1>
+		</div>
+		<button type="button" onClick="success_Prompt()">Completed!</button>
+		<button type="button" onClick="fail_Prompt()">Failed</button>
+		<p id="workout_intensity"></p>
+		<script>
+			function success_Prompt() {
+				document.getElementById("workout_intensity").innerHTML = "How difficult was the workout?";
+				var btnEasy = document.createElement("BUTTON");
+				var tEasy = document.createTextNode("Easy");
+				btnEasy.appendChild(tEasy);
+				document.body.appendChild(btnEasy);
+				var btnHard = document.createElement("BUTTON");
+				var tHard = document.createTextNode("Hard");
+				btnHard.appendChild(tHard);
+				document.body.appendChild(btnHard);
+			}
+		</script>
+		<script>
+			function fail_Prompt() {
+				document.getElementById("workout_intensity").innerHTML = "How many reps did you complete?";
+				var box = document.createElement("input");
+				box.size = 2;
+				document.body.appendChild(box);
+				var btnLog = document.createElement("BUTTON");
+				var tLog = document.createTextNode("Log");
+				btnLog.appendChild(tLog);
+				document.body.appendChild(btnLog);
+			}
+		</script>
+	</body>
+</html>
