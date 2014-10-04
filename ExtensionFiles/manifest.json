@@ -5,11 +5,12 @@
   "description": "Our deepest fear is that we are powerful beyond measure.",
   "version": "1.0",
 
+  "options_page":"workout_settings.html",
   "permissions": [
-    
+    "tabs","storage"
   ],
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "workout_main.html"
+    "default_popup": "popup.html"
   }
 }
