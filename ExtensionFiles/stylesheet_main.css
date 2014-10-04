@@ -1,0 +1,21 @@
+body {
+	background-color: #A4E5ED;
+	background-image: url("Background.gif");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 35%;
+	
+}
+
+h1 {
+	text-align: center;
+	color: #ED9A26;
+}
+
+div {
+	margin-top: 15%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
