@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WORKOUTEXTENSION Settings</title>
+</head>
+
+<body>
+	<h1>Workout Options</h1>
+		<form action="">
+		<input type="checkbox" name="mainWorkout" value="Pushups"> Pushups<br>
+		<input type="checkbox" name="mainWorkout" value="Pullups"> Pullupsups<br>
+		<input type="checkbox" name="mainWorkout" value="Leg Raises"> Leg Raises<br>
+		<input type="checkbox" name="mainWorkout" value="Bridges"> Bridges<br>
+		<input type="checkbox" name="mainWorkout" value="Squats"> Squats<br>
+		<input type="checkbox" name="mainWorkout" value="Handstand PushUps">Handstand PushUps
+		</form>
+		
+	<h1>Utility Options</h1>
+	<h3>Browsing Time Before Workout:</h3>
+	<form action="">
+	<select name="time">
+	<option value="15">15</option>
+	<option value="30">30</option>
+	<option value="45">45</option>
+	<option value="60">60</option>
+	</select>
+	</form>
+	
+	<h3>Sites Not Included In Extraneous Browsing Time:</h3>
+	<form name="input" action="demo_form_action.asp" method="get">
+	Excluded Sites: <input type="text" name="exlcludedSites">
+	<input type="submit" value="Submit">
+	<select name="Sites" multiple>
+	<option value="Friday" selected>test.com</option>
+	<option value="Saturday">test2.com</option>
+	<option value="Sunday">test3.com</option>
+	</select>
+	</form>
+	
+<script>
+var workouts= ["Pushups","Pullups","Leg Raises","Bridges","Squats","Handstand Pushups"];
+
+var pushupVar= ["Wall","Inclined","Kneeling","Half","Full","Close","Uneven","1-Arm Half","Lever","1-Arm"];
+var pushupBeginRep=[10,10,10,8,5,5,5,5,5];
+var pushupProgressRep=[50,40,30,25,20,20,20,20,20,100];
+
+var pullupVar= ["Vertical","Horizontal","Jack Knife","Half","Full","Uneven","1-Arm Half","Assisted 1-Arm","1-Arm"];
+var pullupBeginRep=[10,10,10,8,5,5,5,4,3,1];
+var pullupProgressRep=[40,30,20,15,10,10,9,8,7,6];
+
+var legraisesVar= ["Knee Tucks","Flat Knee Raises","Flat Bent Leg Raises","Flat Frog Raises","Flat Straight Leg Raises","Hanging Knee Raises","Hanging Bent Leg Raises", "Hanging Frog Raises", "Partial Straight Leg Raises","Hanging Straight Leg Raises"];
+var legraisesBeginRep=[10,10,10,8,5,5,5,5,5,5];
+var legraisesProgressRep=[40,35,30,25,20,15,15,15,15,30];
+
+var squatVar=["Shoulderstand","Jackknife","Supported","Half","Full","Close","Uneven","Half 1-Legged","Assisted 1-Legged","1-Legged"];
+var squatBeginRep=[10,10,10,8,5,5,5,5,5,5];
+var squatProgressRep=[50,40,30,50,30,20,20,20,20,50];
+
+var bridgeVar=["Short","Straight","Angled","Head","Half","Full","Wall Walking (Down)","Wall Walking (Up)","Closing","Stand-to-Stand"];
+var bridgeBeginRep=[10,10,8,8,8,6,3,2,1,1];
+var bridgeProgressRep=[50,40,30,25,20,15,10,8,6,10];
+
+var handstandPushupsVar=["Wall Headstands","Crow Stands","Wall Handstands","Half Handstand PushUps","Handstand PushUps","Close Handstand PushUps","Uneven Handstand PushUps","Half 1-Arm Handstand PushUps","Lever Handstand PushUps","1-Arm Handstand PushUps"];
+var handstandPushupsBeginRep=[30,10,30,5,5,5,5,4,3,1];
+var handstandPushupsProgressRep=[120,60,120,20,15,12,10,8,6,5]
+</script>
+</body>
+</html>
