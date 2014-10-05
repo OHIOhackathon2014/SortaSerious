@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Coach Crtr",
+  "name": "Sgt Drill",
   "description": "This extension motivates you to work out.",
   "version": "1.0",
 	"options_page":"workout_settings.html",
