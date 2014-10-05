@@ -7,7 +7,98 @@ function success_Prompt() {
 			
 	<!-- Update user prompt -->
 	document.getElementById("userInstructions").innerHTML = "How difficult was the workout?";
+	var workouts= ["Pushups","Pullups","Squats","Bridges","Handstand Pushups","Leg Raises"];
+workouts.constructor;
+
+
+var pushupCreated=false;
+var pushupVar= ["Wall","Inclined","Kneeling","Half","Full","Close","Uneven","1-Arm Half","Lever","1-Arm"];
+var pushupBeginRep=[10,10,10,8,5,5,5,5,5];
+var pushupProgressRep=[50,40,30,25,20,20,20,20,20,100];
+pushupVar.constructor;
+pushupBeginRep.constructor;
+pushupProgressRep.constructor;
+
+var pullupCreated=false;
+var pullupVar= ["Vertical","Horizontal","Jack Knife","Half","Full","Uneven","1-Arm Half","Assisted 1-Arm","1-Arm"];
+var pullupBeginRep=[10,10,10,8,5,5,5,4,3,1];
+var pullupProgressRep=[40,30,20,15,10,10,9,8,7,6];
+pullupVar.constructor;
+pullupBeginRep.constructor;
+pullupProgressRep.constructor;
+
+var legraiseCreated=false;
+var legraisesVar= ["Knee Tucks","Flat Knee Raises","Flat Bent Leg Raises","Flat Frog Raises","Flat Straight Leg Raises","Hanging Knee Raises","Hanging Bent Leg Raises", "Hanging Frog Raises", "Partial Straight Leg Raises","Hanging Straight Leg Raises"];
+var legraisesBeginRep=[10,10,10,8,5,5,5,5,5,5];
+var legraisesProgressRep=[40,35,30,25,20,15,15,15,15,30];
+legraisesVar.constructor;
+legraisesBeginRep.constructor;
+legraisesProgressRep.constructor;
+
+var squatCreated=false;
+var squatVar=["Shoulderstand","Jackknife","Supported","Half","Full","Close","Uneven","Half 1-Legged","Assisted 1-Legged","1-Legged"];
+var squatBeginRep=[10,10,10,8,5,5,5,5,5,5];
+var squatProgressRep=[50,40,30,50,30,20,20,20,20,50];
+squatVar.constructor;
+squatBeginRep.constructor;
+squatProgressRep.constructor;
+
+var bridgeCreated=false;
+var bridgeVar=["Short","Straight","Angled","Head","Half","Full","Wall Walking (Down)","Wall Walking (Up)","Closing","Stand-to-Stand"];
+var bridgeBeginRep=[10,10,8,8,8,6,3,2,1,1];
+var bridgeProgressRep=[50,40,30,25,20,15,10,8,6,10];
+bridgeVar.constructor;
+bridgeBeginRep.constructor;
+bridgeProgressRep.constructor;
+
+var handstandpushupCreated=false;
+var handstandPushupsVar=["Wall Headstands","Crow Stands","Wall Handstands","Half Handstand PushUps","Handstand PushUps","Close Handstand PushUps","Uneven Handstand PushUps","Half 1-Arm Handstand PushUps","Lever Handstand PushUps","1-Arm Handstand PushUps"];
+var handstandPushupsBeginRep=[30,10,30,5,5,5,5,4,3,1];
+var handstandPushupsProgressRep=[120,60,120,20,15,12,10,8,6,5]
+handstandPushupsVar.constructor;
+handstandPushupsBeginRep.constructor;
+handstandPushupsProgressRep.constructor;
+
+
+//progress vars
+var repProgress=[10,10,10,10,10,30];
+repProgress.constructor;
+
+//logic arrays
+var doArray=["doPushups","doPullups","doSquats","doBridges","doHSPushups","doLegraises"];
+doArray.constructor;
+var checkArray=["pushupsCheck","pullupsCheck","squatsCheck","bridgesCheck","hspushupsCheck","legraisesCheck"];
+checkArray.constructor;
+var nameArray=["pushups","pullups","squats","bridges","handstandpushups","legraises"];
+nameArray.constructor;
+var versionArray=["","","","","",""];
+versionArray.constructor;
+
+function setRepExercise(){
+	var choiceMade=false;
+	for(i=0;i<6;i++){
+		if(localStorage.getItem(doArray[i])=="true"){
+			choiceMade=true;
+		}
+	}
+	if(choiceMade==false){
+		document.getElementById("nochoice").innerHTML="Go make some selections on the Options Page!";
+	}else{
+		while(localStorage.getItem(doArray[index])!="true"){
+			var index=randomIntFromInterval(0,5);
+		}
+		document.getElementById("exercise").innerHTML=localStorage.getItem(workouts[index])+" "+workouts[index];
+		document.getElementById("reps").innerHTML=repProgress[index];
+	}
 	
+}
+
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+document.addEventListener('DOMContentLoaded',setRepExercise);
 	<!-- Remove existing buttons -->
 	element = document.getElementById("btnSucess");
 	element.parentNode.removeChild(element);
