@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Coach Crtr",
+  "description": "This extension motivates you to work out.",
+  "version": "1.0",
+	"options_page":"workout_settings.html",
+  "permissions": [
+    "https://secure.flickr.com/","tabs","storage"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
