@@ -1,0 +1,20 @@
+body {
+	background-color: #F0F0F0;
+	font-family: Helvetica;
+}
+
+.radio {
+	margin-left: 25px;
+}
+
+#pushupsRadio, #pullupsRadio, #legraisesRadio, #bridgesRadio, #squatsRadio, #hspushupsRadio {
+	background-color: #F3F3F3;
+	width: 175px;
+	border-radius: 20px;
+	border-style: solid;
+	border-color: #EAEAEA;
+}
+
+#exerciseCategory {
+	padding-bottom: 25px;
+}
