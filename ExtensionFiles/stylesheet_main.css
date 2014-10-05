@@ -1,34 +1,38 @@
-html { 
-  background: url(img/gym.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 600px;
-  height: 399px;
-}
-
 body {
-	/*background-image: url("img/gym.jpg");
+	background-color: #A4E5ED;
+	background-image: url("Background.gif");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center;*/
-	/*background-size: 35%;*/
-
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+	background-position: center;
+	background-size: 35%;
+	
 }
 
 h1 {
 	text-align: center;
-	color: #E4E3E2;
+	color: #ED970C;
 }
 
 div {
-	/*margin-top: 15%;*/
-	/*margin-bottom: 400px;*/
-/*	margin-left: auto;
-	margin-right: auto;
-	text-align: center;*/
+	margin-top: 15%;
+	margin-left: 375px;
+	margin-right: 375px;
+	text-align: center;
+	background-color: #3BDAED;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-radius: 20px;
+	border-color: #0F0F0F;
+	border-width: 4px;
+	border-style: solid;
+}
+
+button {
+	background-color: #ED970C;
+	border-radius: 5px;
+	border-color: #0F0F0F;
+	border-style: solid;
+	border-width: 1px;
+	margin: 5px;
+	padding: 3px;
 }
