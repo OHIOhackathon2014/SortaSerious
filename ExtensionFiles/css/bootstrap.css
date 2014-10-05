@@ -40,6 +40,10 @@
           box-sizing: border-box;
 }
 
+#theButtons {
+  padding-top: 240px;
+}
+
 article,
 aside,
 details,
@@ -66,9 +70,15 @@ audio:not([controls]) {
 }
 
 html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+
+
+  background: url(img/gym.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 600px;
+  height: 399px;
 }
 
 a:focus {
@@ -223,11 +233,13 @@ textarea {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Impact, Charcoal, sans-serif;
   font-size: 14px;
-  line-height: 20px;
-  color: #333333;
-  background-color: #ffffff;
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 a {
@@ -742,7 +754,7 @@ h6 {
   font-family: inherit;
   font-weight: bold;
   line-height: 20px;
-  color: inherit;
+  color: #E4E3E2;
   text-rendering: optimizelegibility;
 }
 
