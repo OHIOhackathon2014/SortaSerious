@@ -2,7 +2,7 @@
 <html >
 	<head>
 		<!-- <link type="text/css" rel="stylesheet" href="stylesheet_main.css"/> -->
-		<title>Coach crtr</title>
+		<title id="main">Coach crtr</title>
 		
 		<!-- Bootstrap -->
    		<link href="css/bootstrap.css" rel="stylesheet">
@@ -11,63 +11,13 @@
 	<body >
 	<!-- <img src="Logo.gif"></img> -->
 		
-			<h1 id="userInstructions">Do REPITIONS reps of EXERCISE!<h1>
+			<label id="nochoice"><h1 id="userInstructions">Do <label id="reps"></label> reps of <label id="exercise"></label>!<h1></label>
 			<div id="theButtons">
 				<button class="btn btn-success btn-lg" id = "btnSucess" type="button" onClick="success_Prompt()">Completed!</button>
 				</br>
 				<button class="btn btn-danger btn-lg" id = "btnFail" type="button" onClick="fail_Prompt()">Failed</button>
 			</div>
-		<script>
-			function success_Prompt() {
-			
-				<!-- Update user prompt -->
-				document.getElementById("userInstructions").innerHTML = "How difficult was the workout?";
-				
-				<!-- Remove existing buttons -->
-				element = document.getElementById("btnSucess");
-				element.parentNode.removeChild(element);
-				element = document.getElementById("btnFail");
-				element.parentNode.removeChild(element);
-				
-				<!-- Create the easy button-->
-				
-				divHTML = document.getElementById("div1").innerHTML;
-				divHTML = divHTML.concat("<button id=\"btnEasy\" type=\button\>Easy</button>");
-				document.getElementById("div1").innerHTML = divHTML;
-				
-				<!-- Create the hard button-->
-				
-				divHTML = document.getElementById("div1").innerHTML;
-				divHTML = divHTML.concat("<button id=\"btnHard\" type=\button\>Hard</button>");
-				document.getElementById("div1").innerHTML = divHTML;
-			}
-		</script>
-		<script>
-			function fail_Prompt() {
-			
-				<!-- Update user instruction text -->
-				document.getElementById("userInstructions").innerHTML = "How many reps did you complete?";
-				
-				<!-- Remove Existing Buttons -->
-				element = document.getElementById("btnSucess");
-				element.parentNode.removeChild(element);
-				element = document.getElementById("btnFail");
-				element.parentNode.removeChild(element);
-				
-				<!-- Create text box -->
-				
-				divHTML = document.getElementById("div1").innerHTML;
-				divHTML = divHTML.concat("<input id=\"repIn\" type=\input\ size=2></input>");
-				document.getElementById("div1").innerHTML = divHTML;
-				
-				<!-- Create the log button-->
-				
-				divHTML = document.getElementById("div1").innerHTML;
-				divHTML = divHTML.concat("<button id=\"btnLog\" type=\button\>Log</button>");
-				document.getElementById("div1").innerHTML = divHTML;
-				
-			}
-		</script>
+		<script src='workout.js'></script>
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
