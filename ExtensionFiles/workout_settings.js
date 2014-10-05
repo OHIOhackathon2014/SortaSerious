@@ -274,10 +274,9 @@ function restore_options() {
 	
 }
 
-var myVar=setInterval(function () {myTimer()}, 0.5*60*1000);
-
+var myVar=setInterval(function () {myTimer()}, 15*60*1000);
 function myTimer() {
-    window.open("workout_main.html");
+		window.open("workout_main.html");
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
@@ -302,3 +301,4 @@ document.getElementById("hspushupsCheck").addEventListener('change', hsPushupsVa
 
 document.body.addEventListener('click',checkSelect,true);
 document.getElementById('removeButton').addEventListener('click',removeExcludedSite);
+
