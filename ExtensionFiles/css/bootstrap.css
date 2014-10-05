@@ -40,6 +40,10 @@
           box-sizing: border-box;
 }
 
+#theButtons {
+  padding-top: 240px;
+}
+
 article,
 aside,
 details,
