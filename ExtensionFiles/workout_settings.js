@@ -52,18 +52,85 @@ handstandPushupsProgressRep.constructor;
 
 
 //progress vars
-var pushupProgress=[0,10];
-pushupProgress.constructor;
-var pullupProgress=[0,10];
-pullupProgress.constructor;
-var squatProgress=[0,10];
-squatProgress.constructor;
-var legraiseProgress=[0,10];
-legraiseProgress.constructor;
-var bridgeProgress=[0,10];
-bridgeProgress.constructor;
-var hspushupProgress=[0,30];
-hspushupProgress.constructor;
+var repProgress=[10,10,10,10,10,30];
+repProgress.constructor;
+
+//logic arrays
+var doArray=["doPushups","doPullups","doSquats","doBridges","doHSPushups","doLegraises"];
+doArray.constructor;
+var checkArray=["pushupsCheck","pullupsCheck","squatsCheck","bridgesCheck","hspushupsCheck","legraisesCheck"];
+checkArray.constructor;
+var nameArray=["pushups","pullups","squats","bridges","handstandpushups","legraises"];
+nameArray.constructor;
+var versionArray=["","","","","",""];
+versionArray.constructor;
+
+
+function success_Prompt() {
+			
+	<!-- Update user prompt -->
+	document.getElementById("userInstructions").innerHTML = "How difficult was the workout?";
+	
+	<!-- Remove existing buttons -->
+	element = document.getElementById("btnSucess");
+	element.parentNode.removeChild(element);
+	element = document.getElementById("btnFail");
+	element.parentNode.removeChild(element);
+	
+	<!-- Create the easy button-->
+	
+	divHTML = document.getElementById("div1").innerHTML;
+	divHTML = divHTML.concat("<button id=\"btnEasy\" type=\button\ onclick=\"setEasy()\">Easy</button>");
+	document.getElementById("div1").innerHTML = divHTML;
+	
+	<!-- Create the hard button-->
+	
+	divHTML = document.getElementById("div1").innerHTML;
+	divHTML = divHTML.concat("<button id=\"btnHard\" type=\button\ onclick=\"setHard()\">Hard</button>");
+	document.getElementById("div1").innerHTML = divHTML;
+}
+
+function fail_Prompt() {
+
+	<!-- Update user instruction text -->
+	document.getElementById("userInstructions").innerHTML = "How many reps did you complete?";
+	
+	<!-- Remove Existing Buttons -->
+	element = document.getElementById("btnSucess");
+	element.parentNode.removeChild(element);
+	element = document.getElementById("btnFail");
+	element.parentNode.removeChild(element);
+
+	<!-- Create text box -->
+	
+	divHTML = document.getElementById("div1").innerHTML;
+	divHTML = divHTML.concat("<input id=\"repIn\" type=\input\ size=2></input>");
+	document.getElementById("div1").innerHTML = divHTML;
+	
+	<!-- Create the log button-->
+	
+	divHTML = document.getElementById("div1").innerHTML;
+	divHTML = divHTML.concat("<button id=\"btnLog\" type=\button\ onClick=\"repTotal()\">Log</button>");
+	document.getElementById("div1").innerHTML = divHTML;
+				
+}
+
+function setEasy() {
+			
+}
+			
+function setHard() {
+
+}
+		
+function repTotal() {
+	uReps = document.getElementById("repIn").value;
+}
+
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 function addExcludedSite(){
 		var site=document.getElementById("excludedSite").value;
@@ -140,12 +207,7 @@ function hsPushupsVarListing(){
 		document.getElementById("hspushupsRadio").style.display="inline";
 	}
 };
-var doArray=["doPushups","doPullups","doSquats","doBridges","doHSPushups","doLegraises"];
-doArray.constructor;
-var checkArray=["pushupsCheck","pullupsCheck","squatsCheck","bridgesCheck","hspushupsCheck","legraisesCheck"];
-checkArray.constructor;
-var nameArray=["pushups","pullups","squats","bridges","handstandpushups","legraises"];
-nameArray.constructor;
+
 
 // Saves options to chrome.storage
 function save_options() {
@@ -179,6 +241,8 @@ function save_options() {
 				for(j=0;j<radios.length;j++){
 					if(radios[j].name==nameArray[i]&&radios[j].type === 'radio'&&radios[j].checked){
 						localStorage.setItem(nameArray[i],radios[j].value);
+						versionArray[i]=radios[j].value;
+						localStorage.setItem(workouts[i],versionArray[i]);
 					}
 				}
 			}
@@ -210,10 +274,10 @@ function restore_options() {
 	
 }
 
-var myVar=setInterval(function () {myTimer()}, Number(localStorage.getItem(timeInterval))*60*1000);
+var myVar=setInterval(function () {myTimer()}, 0.5*60*1000);
 
 function myTimer() {
-    window.open("http://www.google.com/");
+    window.open("workout_main.html");
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
