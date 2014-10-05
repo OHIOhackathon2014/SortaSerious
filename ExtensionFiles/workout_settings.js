@@ -1,4 +1,4 @@
-var workouts= ["Pushups","Pullups","Leg Raises","Bridges","Squats","Handstand Pushups"];
+var workouts= ["Pushups","Pullups","Squats","Bridges","Handstand Pushups","Leg Raises"];
 workouts.constructor;
 
 
@@ -94,32 +94,7 @@ function checkSelect(){
 }
 
 function pushupsVarListing(){
-	if(document.getElementById("pushupsCheck").checked&&!pushupCreated){
-		pushupCreated=true;
-		var length=pushupVar.length;
-		for(i=0; i<length;i++){
-			currentWorkout=pushupVar[i].toString();
-			var radio=document.createElement("INPUT");
-			radio.setAttribute("type","radio");
-			radio.setAttribute("name","pushups");
-			radio.setAttribute("id",currentWorkout);
-			radio.value=currentWorkout;
-
-			var newDiv=document.createElement('div');
-			newDiv.id=currentWorkout;
-			newDiv.name="pushups";
-				
-			var span=document.createElement('span');
-			span.innerHTML=currentWorkout;
-	
-			newDiv.appendChild(radio);
-			newDiv.appendChild(span);
-			
-			document.getElementById("pushupsRadio").appendChild(newDiv);
-			
-			lastWorkout=currentWorkout;
-		}
-	}else if(!document.getElementById("pushupsCheck").checked){
+	if(!document.getElementById("pushupsCheck").checked){
 		document.getElementById("pushupsRadio").style.display="none";
 	}else{
 		document.getElementById("pushupsRadio").style.display="inline";
@@ -127,32 +102,7 @@ function pushupsVarListing(){
 };
 
 function pullupsVarListing(){
-	if(document.getElementById("pullupsCheck").checked&&!pullupCreated){
-		pullupCreated=true;
-		var length=pullupVar.length;
-		for(i=0; i<length;i++){
-			currentWorkout=pullupVar[i].toString();
-			var radio=document.createElement("INPUT");
-			radio.setAttribute("type","radio");
-			radio.setAttribute("name","pullups");
-			radio.setAttribute("id",currentWorkout);
-			radio.value=currentWorkout;
-
-			var newDiv=document.createElement('div');
-			newDiv.id=currentWorkout;
-			newDiv.name="pullups";
-				
-			var span=document.createElement('span');
-			span.innerHTML=currentWorkout;
-	
-			newDiv.appendChild(radio);
-			newDiv.appendChild(span);
-			
-			document.getElementById("pullupsRadio").appendChild(newDiv);
-			
-			lastWorkout=currentWorkout;
-		}
-	}else if(!document.getElementById("pullupsCheck").checked){
+	if(!document.getElementById("pullupsCheck").checked){
 		document.getElementById("pullupsRadio").style.display="none";
 	}else{
 		document.getElementById("pullupsRadio").style.display="inline";
@@ -160,32 +110,7 @@ function pullupsVarListing(){
 };
 
 function squatsVarListing(){
-	if(document.getElementById("squatsCheck").checked&&!squatCreated){
-		squatCreated=true;
-		var length=squatVar.length;
-		for(i=0; i<length;i++){
-			currentWorkout=squatVar[i].toString();
-			var radio=document.createElement("INPUT");
-			radio.setAttribute("type","radio");
-			radio.setAttribute("name","squats");
-			radio.setAttribute("id",currentWorkout);
-			radio.value=currentWorkout;
-
-			var newDiv=document.createElement('div');
-			newDiv.id=currentWorkout;
-			newDiv.name="squats";
-				
-			var span=document.createElement('span');
-			span.innerHTML=currentWorkout;
-	
-			newDiv.appendChild(radio);
-			newDiv.appendChild(span);
-			
-			document.getElementById("squatsRadio").appendChild(newDiv);
-			
-			lastWorkout=currentWorkout;
-		}
-	}else if(!document.getElementById("squatsCheck").checked){
+	if(!document.getElementById("squatsCheck").checked){
 		document.getElementById("squatsRadio").style.display="none";
 	}else{
 		document.getElementById("squatsRadio").style.display="inline";
@@ -193,32 +118,7 @@ function squatsVarListing(){
 };
 
 function bridgesVarListing(){
-	if(document.getElementById("bridgesCheck").checked&&!bridgeCreated){
-		bridgeCreated=true;
-		var length=bridgeVar.length;
-		for(i=0; i<length;i++){
-			currentWorkout=pushupVar[i].toString();
-			var radio=document.createElement("INPUT");
-			radio.setAttribute("type","radio");
-			radio.setAttribute("name","bridges");
-			radio.setAttribute("id",currentWorkout);
-			radio.value=currentWorkout;
-
-			var newDiv=document.createElement('div');
-			newDiv.id=currentWorkout;
-			newDiv.name="bridges";
-				
-			var span=document.createElement('span');
-			span.innerHTML=currentWorkout;
-	
-			newDiv.appendChild(radio);
-			newDiv.appendChild(span);
-			
-			document.getElementById("bridgesRadio").appendChild(newDiv);
-			
-			lastWorkout=currentWorkout;
-		}
-	}else if(!document.getElementById("bridgesCheck").checked){
+	if(!document.getElementById("bridgesCheck").checked){
 		document.getElementById("bridgesRadio").style.display="none";
 	}else{
 		document.getElementById("bridgesRadio").style.display="inline";
@@ -226,32 +126,7 @@ function bridgesVarListing(){
 };
 
 function legRaisesVarListing(){
-	if(document.getElementById("legraisesCheck").checked&&!legraiseCreated){
-		legraiseCreated=true;
-		length=pushupVar.length;
-		for(i=0; i<length;i++){
-			currentWorkout=pushupVar[i].toString();
-			var radio=document.createElement("INPUT");
-			radio.setAttribute("type","radio");
-			radio.setAttribute("name","legraises");
-			radio.setAttribute("id",currentWorkout);
-			radio.value=currentWorkout;
-
-			var newDiv=document.createElement('div');
-			newDiv.id=currentWorkout;
-			newDiv.name="legraises";
-				
-			var span=document.createElement('span');
-			span.innerHTML=currentWorkout;
-	
-			newDiv.appendChild(radio);
-			newDiv.appendChild(span);
-			
-			document.getElementById("legraisesRadio").appendChild(newDiv);
-			
-			lastWorkout=currentWorkout;
-		}
-	}else if(!document.getElementById("legraisesCheck").checked){
+	if(!document.getElementById("legraisesCheck").checked){
 		document.getElementById("legraisesRadio").style.display="none";
 	}else{
 		document.getElementById("legraisesRadio").style.display="inline";
@@ -259,37 +134,18 @@ function legRaisesVarListing(){
 };
 
 function hsPushupsVarListing(){
-	if(document.getElementById("hspushupsCheck").checked&&!handstandpushupCreated){
-		handstandpushupCreated=true;
-		var length=handstandPushupsVar.length;
-		for(i=0; i<length;i++){
-			currentWorkout=handstandPushupsVar[i].toString();
-			var radio=document.createElement("INPUT");
-			radio.setAttribute("type","radio");
-			radio.setAttribute("name","handstandpushups");
-			radio.setAttribute("id",currentWorkout);
-			radio.value=currentWorkout;
-
-			var newDiv=document.createElement('div');
-			newDiv.id=currentWorkout;
-			newDiv.name="handstandpushups";
-				
-			var span=document.createElement('span');
-			span.innerHTML=currentWorkout;
-	
-			newDiv.appendChild(radio);
-			newDiv.appendChild(span);
-			
-			document.getElementById("hspushupsRadio").appendChild(newDiv);
-			
-			lastWorkout=currentWorkout;
-		}
-	}else if(!document.getElementById("hspushupsCheck").checked){
+	if(!document.getElementById("hspushupsCheck").checked){
 		document.getElementById("hspushupsRadio").style.display="none";
 	}else{
 		document.getElementById("hspushupsRadio").style.display="inline";
 	}
 };
+var doArray=["doPushups","doPullups","doSquats","doBridges","doHSPushups","doLegraises"];
+doArray.constructor;
+var checkArray=["pushupsCheck","pullupsCheck","squatsCheck","bridgesCheck","hspushupsCheck","legraisesCheck"];
+checkArray.constructor;
+var nameArray=["pushups","pullups","squats","bridges","handstandpushups","legraises"];
+nameArray.constructor;
 
 // Saves options to chrome.storage
 function save_options() {
@@ -310,13 +166,23 @@ function save_options() {
 		localStorage.setItem("doBridges",doBridges);
 		localStorage.setItem("doHSPushups",doHSPushups);
 		localStorage.setItem("timingInterval",timingInterval)
-		document.getElementById("test").innerHTML=localStorage.doPushups;
 		//update status to let user know options were saved
 			var status=document.getElementById('status');
 			status.textContent='Options saved.';
 			setTimeout(function(){
 				status.textContent='';
 		},750);
+		var radios=document.getElementsByTagName('input');
+		var value;
+		for(i=0;i<doArray.length;i++){
+			if(localStorage.getItem(doArray[i])=="true"){
+				for(j=0;j<radios.length;j++){
+					if(radios[j].name==nameArray[i]&&radios[j].type === 'radio'&&radios[j].checked){
+						localStorage.setItem(nameArray[i],radios[j].value);
+					}
+				}
+			}
+		}
 	}else{
 		document.getElementById("test").innerHTML="nolocalstorage";
 	}
@@ -324,20 +190,30 @@ function save_options() {
 }
 	
 
-var doArray=["doPushups","doPullups","doSquats","doBridges","doHSPushups","doLegraises"];
-doArray.constructor;
-var checkArray=["pushupsCheck","pullupsCheck","squatsCheck","bridgesCheck","hspushupsCheck","legraisesCheck"];
-checkArray.constructor;
+
 // Restores select box and checkbox state using the preferences
 // stored in chrome.storage.
 function restore_options() {
 		for(i=0;i<doArray.length;i++){
 			if(localStorage.getItem(doArray[i])=="true"){
 				document.getElementById(checkArray[i]).checked=true;
+				var selectedRadio=localStorage.getItem(nameArray[i]);
+				var radios=document.getElementsByTagName('input');
+				for(j=0;j<radios.length;j++){
+					if(radios[j].name==nameArray[i]&&radios[j].type === 'radio'&&radios[j].value==selectedRadio){
+						radios[j].checked=true;
+					}
+				}
 			}
 		}
 		document.getElementById("timingInterval").selectedIndex=localStorage.getItem("timingInterval");
 	
+}
+
+var myVar=setInterval(function () {myTimer()}, Number(localStorage.getItem(timeInterval))*60*1000);
+
+function myTimer() {
+    window.open("http://www.google.com/");
 }
 
 document.addEventListener('DOMContentLoaded', restore_options);
@@ -350,6 +226,7 @@ document.addEventListener('DOMContentLoaded', squatsVarListing);
 document.addEventListener('DOMContentLoaded', legRaisesVarListing);
 document.addEventListener('DOMContentLoaded', bridgesVarListing);
 document.addEventListener('DOMContentLoaded', hsPushupsVarListing);
+document.addEventListener('DOMContentLoaded', myTimer);
 
 //modify listings whenever clicked
 document.getElementById("pushupsCheck").addEventListener('change', pushupsVarListing);
